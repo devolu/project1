@@ -2,7 +2,20 @@
 let counter1 = 0
 let date = new Date();
     date = date.setDate(date.getDate() + 5);
+	
+// Cookie Management
+function write_cookie(name, value) {
+  var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/', '/C:/Users/rasmus.breyer/Documents/project1/index.html', ';'].join('');
+  document.cookie = cookie;
+}
 
+function read_cookie(name) {
+ var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+ result && (result = JSON.parse(result[1]));
+ return result;
+}
+
+// Anwendungscode
 window.addEventListener("load", function() {
 let heading = document.getElementById("heading1"); 
     heading.innerHTML = "Wie viele Verträge möchtest du überprüfen?";
@@ -19,6 +32,8 @@ window.addEventListener("load", function() {
 	heading.addEventListener("click", function() {
     counter1 = counter1 + 1;
     heading.innerHTML = "Ich habe " + counter1 + " Verträge bereits überprüft";
+	write_cookie("Counter", counter1);
+	console.log(read_cookie("Counter"));
 	}, false); 
 	}, false);
 
@@ -45,5 +60,4 @@ window.addEventListener("load", function() {
     headerr.classList.toggle("panik-two");
     }, false);
     }, false);
-
 
