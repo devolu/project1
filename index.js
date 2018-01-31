@@ -14,11 +14,14 @@ window.addEventListener("load", function() {
     console.log(panel.innerHTML);
 }, false); 
 
-window.addEventListener("click", function() {
+    window.addEventListener("load", function() {
     let heading = document.getElementById("heading1");
+	heading.addEventListener("click", function() {
     counter1 = counter1 + 1;
     heading.innerHTML = "Ich habe " + counter1 + " Verträge bereits überprüft";
-}, false); 
+	}, false); 
+	}, false);
+
 
 window.addEventListener("click", function() {
     let heading1 = document.getElementById("p");
@@ -39,7 +42,7 @@ window.addEventListener("load", function() {
     let header = document.getElementById("heading2");
     header.addEventListener("click", function() {
     let headerr = document.getElementById("Title2");
-    headerr.className.toggle("panik-two");
+    headerr.classList.toggle("panik-two");
     }, false);
     }, false);
 
