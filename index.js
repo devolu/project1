@@ -17,7 +17,14 @@ function read_cookie(name) {
 
 // Anwendungscode
 window.addEventListener("load", function() {
-let heading = document.getElementById("heading1"); 
+let indicator = document.getElementById("boxindicator");
+indicator.addEventListener("click", function() {
+indicator.classList.toggle("panik-two");
+}, false);
+}, false); 
+
+window.addEventListener("load", function() {
+let heading = document.getElementById("heading1");
     heading.innerHTML = "Wie viele Verträge möchtest du überprüfen?";
 }, false); 
 
