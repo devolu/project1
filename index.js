@@ -1,5 +1,5 @@
 "use strict";
-let counter1 = 0
+let counter1 = 0;
 let date = new Date();
     date = date.setDate(date.getDate() + 5);
 	
@@ -17,9 +17,10 @@ function read_cookie(name) {
 
 // Anwendungscode
 window.addEventListener("load", function() {
-let indicator = document.getElementById("boxindicator");
-indicator.addEventListener("click", function() {
-indicator.classList.toggle("panik-two");
+let header = document.getElementById("heading2");
+header.addEventListener("click", function() {
+let arrow = document.getElementById("box_arrow");
+arrow.classList.toggle("panik-hide");
 }, false);
 }, false); 
 
@@ -64,7 +65,7 @@ window.addEventListener("load", function() {
     let header = document.getElementById("heading2");
     header.addEventListener("click", function() {
     let headerr = document.getElementById("Title2");
-    headerr.classList.toggle("panik-two");
+    headerr.classList.toggle("panik-hide");
     }, false);
     }, false);
 
