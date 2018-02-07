@@ -5473,8 +5473,7 @@ button.list-group-item-danger.active:focus {
   font-size: 16px;
   color: inherit;
 }
-.grab-two {
-  cursor: grab;
+
 }
 .panel-title > a,
 .panel-title > small,
